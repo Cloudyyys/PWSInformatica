@@ -18,6 +18,14 @@ public:
 	dataCont(std::string inputProductCode) {
 		productCode = inputProductCode;
 	}
+
+	std::string returnDatabaseLine() {
+		std::string DatabaseLine;
+		DatabaseLine.append("&" + productCode + "&" + name + "&" + category + "&" + std::to_string(price) + "&" +
+			std::to_string(inStorage) + "&" + std::to_string(sales) + "&" + remarks + "&");
+		return DatabaseLine;
+	}
+
 };
 
 class catTemplate {
